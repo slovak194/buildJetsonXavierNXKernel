@@ -17,10 +17,12 @@ fi
 cd "$SOURCE_TARGET"
 echo "$PWD"
 # For this version, TX2 and AGX Xavier and Xavier NX have the same source files
-wget -N https://developer.nvidia.com/embedded/L4T/r32_Release_v4.4/r32_Release_v4.4-GMC3/T186/public_sources.tbz2
+wget -N https://developer.nvidia.com/embedded/L4T/r32_Release_v4.4/r32_Release_v4.4-GMC3/T186/Tegra186_Linux_R32.4.4_aarch64.tbz2
+
+# public_sources.tbz2
 
 # l4t-sources is a tbz2 file
-tar -xvf public_sources.tbz2  Linux_for_Tegra/source/public/kernel_src.tbz2 --strip-components=3
+tar -xvf Tegra186_Linux_R32.4.4_aarch64.tbz2 Linux_for_Tegra/source/public/kernel_src.tbz2 --strip-components=3
 tar -xvf kernel_src.tbz2
 # Space is tight; get rid of the compressed kernel source
 rm -r kernel_src.tbz2
